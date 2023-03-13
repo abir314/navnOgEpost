@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navn og Epost register</title>
+    <script src="model.js"></script>
+    <script src="commonView.js"></script>
+    <script src="searchController.js"></script>
+    <script src="searchView.js"></script>
+    <script src="createNewView.js"></script>
+    <script src="createNewController.js"></script>
+    <script src="editView.js"></script>
+    <script src="editController.js"></script>
+    <script src="deleteController.js"></script>
+    <script src="deleteView.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        updateView();
+
+        function updateView(){
+            const page = model.app.page;
+            if(page === 'search') updateViewSearch();
+            else if(page === 'delete') updateViewDelete();
+            else if(page === 'edit') updateViewEdit();
+            else if(page === 'createNew') updateViewCreateNew();
+
+        }
+    </script>
+    
+</body>
+</html>
